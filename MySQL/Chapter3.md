@@ -12,7 +12,7 @@ CREATE \ ALTER \ DROP（删除结构） \ RENAME \ TRUNCATE（清空）
 
 DML：Data Manipulation Language
 
-INSERT \ DELETE（删除一条记录） \ UPDATE \ `SELECT（DQL）`
+INSERT \ DELETE（删除一条记录） \ UPDATE \ `SELECT（DQL：Data Query Language）`
 
 ### DCL数据控制语言 
 

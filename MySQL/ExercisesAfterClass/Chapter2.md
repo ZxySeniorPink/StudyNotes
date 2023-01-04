@@ -65,7 +65,7 @@
    - 方式2：mysql数据库自带的命令行窗口
    - 方式3：图形化管理工具：Navicat、SQLyog、dbeaver等。
 
-
+![image-20230104092845505](./assets/image-20230104092845505.png)
 
 
 

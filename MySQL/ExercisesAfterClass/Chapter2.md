@@ -12,13 +12,13 @@
 
      Win + x $\rightarrow$ g
 
-     ![image-20230104085217840](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104085217840.png)![image-20230104085355962](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104085355962.png)
+     ![image-20230104093105232](./assets/image-20230104093105232.png)![image-20230104093324742](./assets/image-20230104093324742.png)
 
    - MySQL的Path环境变量
 
      环境变量的打开方式：Win + x $\rightarrow$ y
 
-     ![image-20230104090703344](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104090703344.png)![image-20230104084734307](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104084734307.png)![image-20230104084818302](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104084818302.png)![image-20230104084926328](D:\Documents\GitHub\StudyNotes\MySQL\ExercisesAfterClass\assets\image-20230104084926328.png)
+     ![image-20230104093407042](./assets/image-20230104093407042.png)![image-20230104093430497](./assets/image-20230104093430497.png)![image-20230104093457107](./assets/image-20230104093457107.png)![image-20230104093623213](./assets/image-20230104093623213.png)
 
 2. 卸载MySQL主要卸载哪几个位置的内容？
 
@@ -64,10 +64,6 @@
    - 方式1：windows自带的cmd
    - 方式2：mysql数据库自带的命令行窗口
    - 方式3：图形化管理工具：Navicat、SQLyog、dbeaver等。
-
-![image-20230104092845505](./assets/image-20230104092845505.png)
-
-
 
 
 

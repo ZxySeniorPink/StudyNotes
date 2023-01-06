@@ -8,8 +8,7 @@
 SELECT employee_id , last_name,salary * 12 "ANNUAL SALARY"
 FROM employees;
 
-SELECT employee_id,last_name,salary * 12 * (1 + IFNULL(commission_pct,0)) "ANNUAL
-SALARY"
+SELECT employee_id,last_name,salary * 12 * (1 + IFNULL(commission_pct,0)) "ANNUAL SALARY"
 FROM employees;
 ```
 

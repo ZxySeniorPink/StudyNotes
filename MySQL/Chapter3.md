@@ -84,15 +84,150 @@ set FOREIGN_KEY_CHECKS=0;  #在导入前设置为不检查外键约束
 set FOREIGN_KEY_CHECKS=1;  #在导入后恢复检查外键约束
 ```
 
+## 3. 基本的 SELECT 语句
 
+### 3.1 SELECT ... FROM ...
 
+- 语法
 
+  ```sql
+  SELECT 标识选择哪些列
+  FROM 标识从哪个表中选择
+  ```
 
+- 选择全部列
 
+  ```sql
+  SELECT *
+  FROM departments;
+  ```
 
+- 选择特定的列
 
+  ```sql
+  SELECT department_id, location_id
+  FROM departments;
+  ```
 
+### 3.2 列的别名
 
+- 重命名一个列
+
+- 便于计算
+
+- 紧跟列名，也可以在列名和别名之间加入关键字AS，别名使用双引号，以便在别名中包含空格或特殊的字符并区分大小写
+
+- AS可以省略
+
+- 建议别名简短，见名知意
+
+  举例
+
+  ```sql
+  SELECT last_name AS name, commission_pct comm
+  FROM employees;
+  ```
+
+### 3.3 去除重复行
+
+`DISTINCT关键字`
+
+```sql
+SELECT DISTINCT department_id FROM employees;
+```
+
+### 3.4 空值参与运算
+
+空值：null ( 不等同于0,  ’ ‘,  ’null‘ )
+
+实际问题的解决方案：引入IFNULL
+
+```sql
+SELECT employee_id, salary "月工资", salary * (1 + IFNULL(commission_pct, 0)) * 12 "年工资" FROM employees;
+```
+
+这里你一定要注意，在 MySQL 里面， 空值不等于空字符串。一个空字符串的长度是 0，而一个空值的长 度是空。而且，在 MySQL 里面，空值是占用空间的。
+
+### 3.5 着重号 ``
+
+必须保证你的字段没有和保留字、数据库系统或常见方法冲突。
+
+如果坚持使用，在SQL语句中使用 \` ` 引起来。
+
+```sql
+SELECT * FROM `order`;
+```
+
+### 6) 查询常数
+
+```sql
+SELECT '小张科技' as "公司名", employee_id, last_name FROM employees;
+```
+
+## 4. 显示表结构
+
+显示表中字段的详细信息
+
+```shell
+DESCRIBE employees;
+或
+DESC employees;
+mysql> desc employees;
++----------------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| employee_id | int(6) | NO | PRI | 0 | |
+| first_name | varchar(20) | YES | | NULL | |
+| last_name | varchar(25) | NO | | NULL | |
+| email | varchar(25) | NO | UNI | NULL | |
+| phone_number | varchar(20) | YES | | NULL | |
+| hire_date | date | NO | | NULL | |
+| job_id | varchar(10) | NO | MUL | NULL | |
+| salary | double(8,2) | YES | | NULL | |
+| commission_pct | double(2,2) | YES | | NULL | |
+| manager_id | int(6) | YES | MUL | NULL | |
+| department_id | int(4) | YES | MUL | NULL | |
++----------------+-------------+------+-----+---------+-------+
+11 rows in set (0.00 sec)
+```
+
+![image-20230106202443059](./assets/image-20230106202443059.png)
+
+其中，各个字段的含义分别解释如下：
+
+- Field：表示字段名称。
+- Type：表示字段类型，这里 barcode、goodsname 是文本型的，price 是整数类型的。
+- Null：表示该列是否可以存储NULL值。
+- Key：表示该列是否已编制索引。
+- PRI表示该列是表主键的一部分；
+- UNI表示该列是UNIQUE索引的一部分；
+- MUL表示在列中某个给定值允许出现多次。
+- Default：表示该列是否有默认值，如果有，那么值是多少。
+- Extra：表示可以获取的与给定列有关的附加信息，例如AUTO_INCREMENT等。
+
+## 4. 过滤数据
+
+- 语法
+
+  ```sql
+  SELECT 字段1,字段2
+  FROM 表名
+  WHERE 过滤条件
+  ```
+
+  
+
+使用WHERE 子句，将不满足条件的行过滤掉。WHERE子句紧随 FROM子句。
+
+- 举例
+
+  ```sql
+  SELECT employee_id, last_name, job_id, department_id
+  FROM employees
+  WHERE department_id = 90;
+  ```
+
+  
 
 
 

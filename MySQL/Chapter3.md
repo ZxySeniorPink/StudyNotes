@@ -205,7 +205,7 @@ mysql> desc employees;
 - Default：表示该列是否有默认值，如果有，那么值是多少。
 - Extra：表示可以获取的与给定列有关的附加信息，例如AUTO_INCREMENT等。
 
-## 4. 过滤数据
+## 5. 过滤数据
 
 - 语法
 

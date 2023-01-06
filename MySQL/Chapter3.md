@@ -2,19 +2,19 @@
 
 ## 1. SQL的分类
 
-### DDL数据定义语言
+### 1.1 DDL数据定义语言
 
 DDL：Data Definition Languages
 
 CREATE \ ALTER \ DROP（删除结构） \ RENAME \ TRUNCATE（清空）
 
-### DML数据操作语言
+### 1.2 DML数据操作语言
 
 DML：Data Manipulation Language
 
 INSERT \ DELETE（删除一条记录） \ UPDATE \ `SELECT（DQL：Data Query Language）`
 
-### DCL数据控制语言 
+### 1.3 DCL数据控制语言 
 
 DCL：Data Control Language
 
@@ -158,7 +158,7 @@ SELECT employee_id, salary "月工资", salary * (1 + IFNULL(commission_pct, 0))
 SELECT * FROM `order`;
 ```
 
-### 6) 查询常数
+### 3.6 查询常数
 
 ```sql
 SELECT '小张科技' as "公司名", employee_id, last_name FROM employees;

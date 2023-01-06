@@ -168,27 +168,25 @@ SELECT '小张科技' as "公司名", employee_id, last_name FROM employees;
 
 显示表中字段的详细信息
 
+`DESCRIBE employees;`或`DESC employees;`
+
 ```shell
-DESCRIBE employees;
-或
-DESC employees;
 mysql> desc employees;
 +----------------+-------------+------+-----+---------+-------+
-| Field | Type | Null | Key | Default | Extra |
+| Field          | Type        | Null | Key | Default | Extra |
 +----------------+-------------+------+-----+---------+-------+
-| employee_id | int(6) | NO | PRI | 0 | |
-| first_name | varchar(20) | YES | | NULL | |
-| last_name | varchar(25) | NO | | NULL | |
-| email | varchar(25) | NO | UNI | NULL | |
-| phone_number | varchar(20) | YES | | NULL | |
-| hire_date | date | NO | | NULL | |
-| job_id | varchar(10) | NO | MUL | NULL | |
-| salary | double(8,2) | YES | | NULL | |
-| commission_pct | double(2,2) | YES | | NULL | |
-| manager_id | int(6) | YES | MUL | NULL | |
-| department_id | int(4) | YES | MUL | NULL | |
+| employee_id    | int(6)      | NO   | PRI | 0       |       |
+| first_name     | varchar(20) | YES  |     | NULL    |       |
+| last_name      | varchar(25) | NO   |     | NULL    |       |
+| email          | varchar(25) | NO   | UNI | NULL    |       |
+| phone_number   | varchar(20) | YES  |     | NULL    |       |
+| hire_date      | date        | NO   |     | NULL    |       |
+| job_id         | varchar(10) | NO   | MUL | NULL    |       |
+| salary         | double(8,2) | YES  |     | NULL    |       |
+| commission_pct | double(2,2) | YES  |     | NULL    |       |
+| manager_id     | int(6)      | YES  | MUL | NULL    |       |
+| department_id  | int(4)      | YES  | MUL | NULL    |       |
 +----------------+-------------+------+-----+---------+-------+
-11 rows in set (0.00 sec)
 ```
 
 ![image-20230106202443059](./assets/image-20230106202443059.png)

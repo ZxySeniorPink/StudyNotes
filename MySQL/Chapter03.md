@@ -1,4 +1,4 @@
-# Chapter3 基本的select语句
+# Chapter03 基本的select语句
 
 ## 1. SQL的分类
 

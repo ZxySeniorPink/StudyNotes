@@ -19,7 +19,7 @@ FROM     employees
 ORDER BY hire_date ;
 ```
 
-![image-20230107235854906](./assets/image-20230107235854906.png)
+![image-20230107235854906](./images/image-20230107235854906.png)
 
 
 
@@ -29,7 +29,7 @@ FROM     employees
 ORDER BY hire_date DESC ;
 ```
 
-![image-20230107235932968](./assets/image-20230107235932968.png)
+![image-20230107235932968](./images/image-20230107235932968.png)
 
 
 
@@ -39,7 +39,7 @@ FROM   employees
 ORDER BY annsal;
 ```
 
-![image-20230108000007598](./assets/image-20230108000007598.png)
+![image-20230108000007598](./images/image-20230108000007598.png)
 
 
 
@@ -51,7 +51,7 @@ FROM   employees
 ORDER BY department_id, salary DESC;
 ```
 
-![image-20230108000030301](./assets/image-20230108000030301.png)
+![image-20230108000030301](./images/image-20230108000030301.png)
 
 
 
